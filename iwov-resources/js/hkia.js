@@ -4854,7 +4854,7 @@ $.datepicker._findPos = function(e) {
         url: "/iwov-resources/custom/json/server.json",
         async: !1,
         cache: !1,
-        type: "POST",
+        type: "GET",
         timeout: 0,
         success: function() {
             var e = new Date - t,
