@@ -1831,7 +1831,7 @@ HKIA.config("API", {
         },
         carpark: {
             url: function() {
-                return HKIA.config("develop_mode") || HKIA.config("_uat_") ? "//aahkcarpark.blob.core.windows.net/staging/data.json" : "//api.myjson.com/bins/qcizq"
+                return HKIA.config("develop_mode") || HKIA.config("_uat_") ? "//aahkcarpark.blob.core.windows.net/staging/data.json" : "//nyankotan.github.io/data/data.json"
             },
             config: {
                 timeout: 2500,
@@ -1841,7 +1841,7 @@ HKIA.config("API", {
         },
         carparkManual: {
             url: function() {
-                return HKIA.config("develop_mode") || HKIA.config("_uat_") ? "//aahkcarpark.blob.core.windows.net/staging/manual.json" : "//api.myjson.com/bins/13g2au"
+                return HKIA.config("develop_mode") || HKIA.config("_uat_") ? "//aahkcarpark.blob.core.windows.net/staging/manual.json" : "//nyankotan.github.io/data/manual.json"
             },
             config: {
                 timeout: 2500,
