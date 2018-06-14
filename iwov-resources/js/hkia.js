@@ -1417,7 +1417,7 @@ HKIA.config("API", {
         },
         weather: {
             url: function() {
-                return "10.129.154.22" == location.host || "175.45.49.247" == location.host || HKIA.config("develop_mode") ? HKIA.config("hkia_dummy_api_domain") + "/iwov-resources/custom/json/currentWX.json" : HKIA.config("hkia_domain") + "/wxinfo/rest/currentWX"
+                return "10.129.154.22" == location.host || "175.45.49.247" == location.host || HKIA.config("develop_mode") ? HKIA.config("hkia_dummy_api_domain") + "/iwov-resources/custom/json/currentWX.json" : "/wxinfo/rest/currentWX"
             },
             method: "GET",
             adapter: function(e, t, i) {
