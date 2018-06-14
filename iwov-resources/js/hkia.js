@@ -2946,7 +2946,7 @@ $.datepicker._findPos = function(e) {
             var o = this,
                 s = HKIA.config("API")[a],
                 l = HKIA.extend(!0, {
-                    method: "POST",
+                    method: "GET",
                     config: {}
                 }, s, r),
                 c = l.config;
