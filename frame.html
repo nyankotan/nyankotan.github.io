@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reader</title>
+  <style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    }
+
+    #control {
+    padding: 0.5rem;
+    background: #f0f0f0;
+    display: flex;
+    gap: 0.5rem;
+    box-sizing: border-box;
+    }
+
+    #urlInput {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 1rem;
+    box-sizing: border-box;
+    }
+
+    #loadBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    }
+
+    #viewer {
+    width: 100%;
+    height: calc(100dvh - 56px);
+    border: none;
+    display: block;
+    }
+
+    /* optional */
+    input, button {
+    font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div id="control">
+    <input type="text" id="urlInput" placeholder="" />
+    <button id="loadBtn">Load</button>
+  </div>
+  <iframe id="viewer" src=""></iframe>
+
+  <script>
+    const input = document.getElementById('urlInput');
+    const button = document.getElementById('loadBtn');
+    const viewer = document.getElementById('viewer');
+
+    button.addEventListener('click', () => {
+      const subdomain = input.value.trim();
+      if (/^[a-zA-Z0-9\-]+$/.test(subdomain)) {
+        const url = `https://${subdomain}.wordpress.com/`;
+        viewer.src = url;
+        input.value = ""; // clear
+      } else {
+        alert("enter wordpress username");
+      }
+    });
+  </script>
+</body>
+</html>
